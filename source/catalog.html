@@ -17,18 +17,18 @@
       </button>
       <ul class="header__menu-list">
         <li class="header__menu-item">
-          <a>Каталог товаров</a>
+          <a class="header__menu-link">Каталог товаров</a>
         </li>
         <li class="header__menu-item">
-          <a href="#">Вязание на заказ</a>
+          <a class="header__menu-link" href="form.html">Вязание на заказ</a>
         </li>
       </ul>
       <ul class="header__menu-list">
         <li class="header__user-list-item header__user-list-item--search">
-          <a href="#">Поиск по сайту</a>
+          <a class="header__menu-link" href="#">Поиск по сайту</a>
         </li>
         <li class="header__user-list-item header__user-list-item--cart">
-          <a href="#">Корзина</a>
+          <a class="header__menu-link" href="#">Корзина</a>
         </li>
       </ul>
     </div>
@@ -44,7 +44,7 @@
         <ul class="goods__list">
           <li class="goods__item">
             <article class="goods__article">
-              <h1 class="goods__title"><a href="#">Зайчик попрыгайчик</a></h1>
+              <h1 class="goods__title"><a class="goods__title-link" href="#">Зайчик попрыгайчик</a></h1>
               <a href="#">
                 <img class="goods__image" src="http://placehold.it/150x100">
               </a>
@@ -55,7 +55,7 @@
           </li>
           <li class="goods__item">
             <article class="goods__article">
-              <h1 class="goods__title"><a href="#">Корзинка для белья</a></h1>
+              <h1 class="goods__title"><a class="goods__title-link" href="#">Корзинка для белья</a></h1>
               <a href="#">
                 <img class="goods__image" src="http://placehold.it/150x100">
               </a>
@@ -66,7 +66,7 @@
           </li>
           <li class="goods__item">
             <article class="goods__article">
-              <h1 class="goods__title"><a href="#">Большая корзинка для игрушек</a></h1>
+              <h1 class="goods__title"><a class="goods__title-link" href="#">Большая корзинка для игрушек</a></h1>
               <a href="#">
                 <img class="goods__image" src="http://placehold.it/150x100">
               </a>
@@ -119,9 +119,9 @@
   <section class="modal-cart">
     <form class="modal-cart__form" action="https://echo.htmlacademy.ru" method="POST">
       <h2 class="modal-cart__title">Добавить в корзину</h2>
-      <span class="modal-cart__pre-size">Выберите размер</span>
+      <span class="modal-cart__pre-size">Выберите размер:</span>
       <ul class="modal-cart__size-list">
-        <li class="modal-cart__size-item">S</li>
+        <li class="modal-cart__size-item modal-cart__size-item--active">S</li>
         <li class="modal-cart__size-item">M</li>
         <li class="modal-cart__size-item">L</li>
       </ul>
