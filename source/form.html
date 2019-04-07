@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="header">
@@ -10,26 +11,23 @@
       <a class="header__logo-link" href="index.html">
         <img class="header__logo-img" src="http://placehold.it/150x100">
       </a>
-      <button class="header__open">
+      <button class="header__toggle header__toggle--open">
         <span class="visually-hidden">Раскрыть меню</span>
-      </button>
-      <button class="header__close">
-        <span class="visually-hidden">Закрыть меню</span>
       </button>
       <ul class="header__menu-list">
         <li class="header__menu-item">
-          <a href="#">Каталог товаров</a>
+          <a class="header__menu-link" href="catalog.html">Каталог товаров</a>
         </li>
         <li class="header__menu-item">
-          <a>Вязание на заказ</a>
+          <a class="header__menu-link">Вязание на заказ</a>
         </li>
       </ul>
       <ul class="header__menu-list">
         <li class="header__user-list-item header__user-list-item--search">
-          <a href="#">Поиск по сайту</a>
+          <a class="header__menu-link" href="#">Поиск по сайту</a>
         </li>
         <li class="header__user-list-item header__user-list-item--cart">
-          <a href="#">Корзина</a>
+          <a class="header__menu-link" href="#">Корзина</a>
         </li>
       </ul>
     </div>
@@ -100,31 +98,31 @@
             <h2 class="form__title">ФИО</h2>
             <p>
               <label class="form__name-label" for="name">Имя:</label>
-              <input type="text" name="name" id="name" placeholder="Введите ваше имя*">
+              <input class="form__text-inp" type="text" name="name" id="name" placeholder="Введите ваше имя*">
             </p>
             <p>
               <label class="form__name-label" for="surname">Фамилия:</label>
-              <input type="text" name="surname" id="surname" placeholder="Укажите фамилию*">
+              <input class="form__text-inp" type="text" name="surname" id="surname" placeholder="Укажите фамилию*">
             </p>
             <p>
               <label class="form__name-label" for="patronymic">Отчество:</label>
-              <input type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+              <input class="form__text-inp" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
             </p>
           </fieldset>
           <fieldset class="form__tel">
             <h2 class="form__title">Тел</h2>
-            <input class="form__text-inp--tel" type="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
+            <input class="form__text-inp form__text-inp--tel" type="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
           </fieldset>
           <fieldset class="form__mail">
             <h2 class="form__title">E-mail</h2>
-            <input class="form__text-inp--mail" type="email" name="email" placeholder="Ваш Email*">
+            <input class="form__text-inp form__text-inp--mail" type="email" name="email" placeholder="Ваш Email*">
           </fieldset>
           <fieldset class="form__add">
             <h2 class="form__title">Доп</h2>
-            <textarea placeholder="Опишите все ваши пожелания к заказу"></textarea>
+            <textarea class="form__textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </fieldset>
           <span class="form__note"><sup>*</sup>Поля обязательны для заполнения</span>
-          <button class="form__button button" type="submit"></button>
+          <button class="form__button button" type="submit">Отправить заказ</button>
         </form>
       </div>
     </section>
