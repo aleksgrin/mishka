@@ -1,9 +1,147 @@
 .header__wrapper {
   .wrapper-mob();
+  outline: 1px solid red;
+
+  position: relative;
+}
+
+.header__logo-link {
+  display: block;
+  height: 89px;
 }
 
 .header__menu-link {
+  font-weight: bold;
   font-size: 17px;
   line-height: 24px;
   color: #000000;
+}
+
+.header__toggle {
+  background: none;
+  border: none;
+  position: absolute;
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  right: 0;
+  top: 25px;
+}
+
+.header__menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header__menu-item{
+  padding-left: 46px;
+}
+
+.header__menu-link {
+  display: block;
+  padding: 27px 0;
+}
+
+@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+  .header__wrapper {
+    .wrapper-tab();
+  }
+
+  .header__logo-link {
+    width: 321px;
+    position: absolute;
+  }
+
+  .header__toggle {
+    display: none;
+  }
+
+  .header__search {
+    display: none;
+  }
+
+  .header__menu-list {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .header__menu-item {
+    outline: 1px solid lightblue;
+    min-height: 89px;
+    padding-left: 0;
+  }
+
+  .header__menu-item:nth-child(1),
+  .header__menu-item:nth-child(2) {
+
+    .header__menu-link {
+      font-size: 15px;
+    }
+
+    margin-top: 79px;
+    width: 167px;
+  }
+
+  .header__menu-item--search {
+    width: 82px;
+  }
+
+  .header__menu-item--cart {
+    padding-left: 60px;
+    text-align: right;
+
+    margin-left: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .header__wrapper {
+    .wrapper-desk();
+  }
+
+  .header__logo-link {
+    position: absolute;
+  }
+
+  .header__toggle {
+    display: none;
+  }
+
+  .header__menu-list {
+    display: flex;
+  }
+
+  .header__menu-item {
+    padding-left: 0;
+    min-height: 89px;
+  }
+
+  .header__menu-link {
+    padding: 32px 0;
+  }
+
+  .header__menu-item:first-child {
+    width: 184px;
+    border-right: 1px solid #ececec;
+  }
+
+  .header__menu-item:nth-child(2) {
+    width: 210px;
+    padding-left: 36px;
+  }
+
+  .header__search {
+    display: none;
+  }
+
+  .header__menu-item--search {
+    outline: 1px solid blue;
+    width: 82px;
+    margin-left: auto;
+  }
+
+  .header__menu-item--cart {
+    padding-left: 85px;
+  }
 }
