@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -9,27 +10,34 @@
   <header class="header">
     <div class="header__wrapper">
       <a class="header__logo-link" href="index.html">
-        <img class="header__logo-img" src="http://placehold.it/150x100">
+        <img class="header__logo-img" src="">
       </a>
       <button class="header__toggle header__toggle--open">
         <span class="visually-hidden">Раскрыть меню</span>
       </button>
       <ul class="header__menu-list">
-        <li class="header__menu-item">
+        <li class="header__menu-item header__menu-item--out">
           <a class="header__menu-link" href="catalog.html">Каталог товаров</a>
         </li>
-        <li class="header__menu-item">
+        <li class="header__menu-item header__menu-item--out">
           <a class="header__menu-link">Вязание на заказ</a>
         </li>
-      </ul>
-      <ul class="header__menu-list">
-        <li class="header__user-list-item header__user-list-item--search">
-          <a class="header__menu-link" href="#">Поиск по сайту</a>
+        <li class="header__menu-item header__menu-item--search">
+          <a class="header__menu-link" href="#"><span class="header__search">Поиск по сайту</span></a>
         </li>
-        <li class="header__user-list-item header__user-list-item--cart">
-          <a class="header__menu-link" href="#">Корзина</a>
+        <li class="header__menu-item header__menu-item--cart">
+          <a class="header__menu-link" href="#">Корзина: пока пуста</a>
         </li>
       </ul>
+      <ul class="header__product-menu header__product-menu--out">
+        <li class="header__product-menu-item">
+          <a class="header__product-menu-link" href="#">Новые поступления</a>
+        </li>
+        <li class="header__product-menu-item">
+          <a class="header__product-menu-link" href="#">Распродажа</a>
+        </li>
+      </ul>
+      <span class="header__delivery header__delivery--out">Бесплатная доставка по России</span>
     </div>
   </header>
   <main class="main">

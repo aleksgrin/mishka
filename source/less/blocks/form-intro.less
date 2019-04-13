@@ -4,10 +4,41 @@
 
 .form-intro__wrapper {
   .wrapper-mob();
+  padding-top: 53px;
+  padding-bottom: 53px;
 }
 
 .form-intro__title {
   font-weight: bold;
   font-size: 27px;
   line-height: 30px;
+
+  text-align: center;
 }
+
+@media (min-width: @tablet-width) {
+  .form-intro__wrapper {
+    .wrapper-tab();
+    padding-top: 58px;
+    padding-bottom: 44px;
+  }
+
+  .form-intro__title {
+    font-size: 43px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-intro__wrapper {
+    .wrapper-desk();
+    padding-top: 49px;
+    padding-bottom: 56px;
+  }
+
+  .form-intro__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
