@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -9,31 +10,40 @@
   <header class="header">
     <div class="header__wrapper">
       <a class="header__logo-link">
-        <img class="header__logo-img" src="http://placehold.it/150x100">
+        <img class="header__logo-img" src="">
       </a>
       <button class="header__toggle header__toggle--open">
         <span class="visually-hidden">Раскрыть меню</span>
       </button>
       <ul class="header__menu-list">
-        <li class="header__menu-item">
+        <li class="header__menu-item header__menu-item--out">
           <a class="header__menu-link" href="catalog.html">Каталог товаров</a>
         </li>
-        <li class="header__menu-item">
+        <li class="header__menu-item header__menu-item--out">
           <a class="header__menu-link" href="form.html">Вязание на заказ</a>
         </li>
         <li class="header__menu-item header__menu-item--search">
-          <a class="header__menu-link" href="#">Поиск по сайту</a>
+          <a class="header__menu-link" href="#"><span class="header__search">Поиск по сайту</span></a>
         </li>
         <li class="header__menu-item header__menu-item--cart">
-          <a class="header__menu-link" href="#">Корзина</a>
+          <a class="header__menu-link" href="#">Корзина: пока пуста</a>
         </li>
       </ul>
+      <ul class="header__product-menu header__product-menu--out">
+        <li class="header__product-menu-item">
+          <a class="header__product-menu-link" href="#">Новые поступления</a>
+        </li>
+        <li class="header__product-menu-item">
+          <a class="header__product-menu-link" href="#">Распродажа</a>
+        </li>
+      </ul>
+      <span class="header__delivery header__delivery--out">Бесплатная доставка по России</span>
     </div>
   </header>
   <main class="main">
     <section class="intro">
       <div class="intro__wrapper">
-        <h1 class="intro__title">Милые штуки ручной работы для дома</h1>
+        <h1 class="intro__title">Милые штуки ручной <br> работы для дома</h1>
         <ul class="intro__list">
           <li class="intro__item intro__item--interior">
             <a class="intro__item-link" href="#">Предметы интерьера</a>
@@ -46,28 +56,32 @@
     </section>
     <section class="week-product">
       <div class="week-product__wrapper">
-        <h2 class="week-product__title">Вязанные корзинки</h2>
+        <h2 class="week-product__title">Вязаные корзинки</h2>
         <span class="week-product__attention">Товар недели</span>
-        <p class="week-product__description">
-          Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
-        </p>
-        <table class="week-product__table">
-          <tr class="week-product__row">
-            <td class="week-product__data">Цвет</td>
-            <td class="week-product__data">«Тиффани»/серый</td>
-          </tr>
-          <tr class="week-product__row">
-            <td class="week-product__data">Диаметр</td>
-            <td class="week-product__data">25см</td>
-          </tr>
-          <tr class="week-product__row">
-            <td class="week-product__data">Высота</td>
-            <td class="week-product__data">15см</td>
-          </tr>
-        </table>
-        <img class="week-product__image" src="http://placehold.it/150x100">
-        <span class="week-product__cost">Цена: 990 руб.</span>
-        <a class="week-product__order button" href="#">Заказать</a>
+        <div class="week-product__half">
+          <p class="week-product__description">
+            Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
+          </p>
+          <table class="week-product__table">
+            <tr class="week-product__row">
+              <td class="week-product__data week-product__data--small">Цвет:</td>
+              <td class="week-product__data">«Тиффани»/серый</td>
+            </tr>
+            <tr class="week-product__row">
+              <td class="week-product__data week-product__data--small">Диаметр:</td>
+              <td class="week-product__data">25см</td>
+            </tr>
+            <tr class="week-product__row">
+              <td class="week-product__data week-product__data--small">Высота:</td>
+              <td class="week-product__data">15см</td>
+            </tr>
+          </table>
+        </div>
+        <img class="week-product__image" src="http://placehold.it/260x315">
+        <div class="week-product__half">
+          <span class="week-product__cost">Цена: 990 руб.</span>
+          <a class="week-product__order button" href="#">Заказать</a>
+        </div>
       </div>
     </section>
     <section class="about-us">
@@ -77,9 +91,9 @@
           <li class="about-us__item about-us__item--materials">Экологически чистые материалы</li>
           <li class="about-us__item about-us__item--cost">Скандинавский стиль по российской цене</li>
           <li class="about-us__item about-us__item--like">Увеличивает лайки на фотографиях</li>
-          <li class="about-us__item about-us__item--knit">Связано вручную с любовью и умилением</li>
+          <li class="about-us__item about-us__item--knit">Связано вручную с <br> любовью и умилением</li>
           <li class="about-us__item about-us__item--native">Поддержка отечественного производителя</li>
-          <li class="about-us__item about-us__item--gift">Поставляется в подарочной упаковке</li>
+          <li class="about-us__item about-us__item--gift">Поставляется в <br> подарочной упаковке</li>
         </ul>
       </div>
     </section>
@@ -93,12 +107,14 @@
           <cite class="feedback-item__name">Анастасия Красильникова</cite>
           <a class="feedback-item__link" href="#">@misssssiskras</a>
         </section>
-        <button class="feedback__control feedback__control--previous">
-          <span class="visually-hidden">Предыдущий отзыв</span>
-        </button>
-        <button class="feedback__control feedback__control--next">
-          <span class="visually-hidden">Следующий отзыв</span>
-        </button>
+        <div class="feedback__controrols-wrap">
+          <button class="feedback__control feedback__control--previous">
+            <span class="visually-hidden">Предыдущий отзыв</span>
+          </button>
+          <button class="feedback__control feedback__control--next">
+            <span class="visually-hidden">Следующий отзыв</span>
+          </button>
+        </div>
         <a class="feedback__button button" href="#">Написать</a>
       </div>
     </section>
@@ -106,12 +122,12 @@
       <div class="contacts__wrapper">
         <h2 class="contacts__title">Контакты</h2>
         <p class="contacts__email-wrap">
-          <span class="contacts__email">email:</span>
-          <a class="contacts__email contacts__email--underline" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+          <span class="contacts__email">e-mail:</span>
+          <a class="contacts__email-link contacts__email-link--underline" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
         </p>
         <p class="contacts__adress-wrap">
-          <span class="contacts__adress">Адрес:</span>
-          <a class="contacts__adress" href="https://www.google.com/maps/place/Доходный+дом+Н.+А.+Мельцера/@59.9388059,30.3220345,17.75z/data=!4m5!3m4!1s0x4696310fca640933:0x8403eb878242dbd5!8m2!3d59.9387782!4d30.3231967?hl=ru-RU">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</a>
+          <span class="contacts__adress">адрес:</span>
+          <a class="contacts__adress-link" href="https://www.google.com/maps/place/Доходный+дом+Н.+А.+Мельцера/@59.9388059,30.3220345,17.75z/data=!4m5!3m4!1s0x4696310fca640933:0x8403eb878242dbd5!8m2!3d59.9387782!4d30.3231967?hl=ru-RU">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</a>
         </p>
         <div class="contacts__map">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1188.3737169803976!2d30.322034484311697!3d59.938805915698296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca640933%3A0x8403eb878242dbd5!2z0JTQvtGF0L7QtNC90YvQuSDQtNC-0Lwg0J0uINCQLiDQnNC10LvRjNGG0LXRgNCw!5e0!3m2!1sru!2sru!4v1554227934679!5m2!1sru!2sru" width="280" height="450" allowfullscreen></iframe>
@@ -122,6 +138,9 @@
   </main>
   <footer class="footer">
     <div class="footer__wrapper">
+      <a class="footer__logo">
+        <img src="http://placehold.it/105x50">
+      </a>
       <ul class="social">
         <li class="social__item">
           <a href="#">
@@ -141,7 +160,7 @@
       </ul>
       <div class="footer__copyright">
         <span class="footer__develop">Разработано</span>
-        <a class="footer__developer-logo" href="https://htmlacademy.ru/intensive/adaptive"><img src="http://placehold.it/150x100"></a>
+        <a class="footer__developer-logo" href="https://htmlacademy.ru/intensive/adaptive"><img src="http://placehold.it/30x38"></a>
       </div>
     </div>
   </footer>

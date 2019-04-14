@@ -1,5 +1,6 @@
 .feedback__wrapper {
   .wrapper-mob();
+  padding-top: 7px;
 }
 
 .feedback__title {
@@ -10,16 +11,130 @@
   font-size: 15px;
   line-height: 30px;
   color: @col-grey;
+
+  margin: 0;
+  padding-top: 3px;
+  margin-bottom: 29px;
 }
 
 .feedback-item__name {
   font-weight: bold;
   font-size: 17px;
   line-height: 24px;
+  font-style: normal;
 }
 
 .feedback-item__link {
+  display: block;
   font-size: 17px;
   line-height: 30px;
   color: @col-grey;
+
+  margin-bottom: 29px;
+}
+
+.feedback__controrols-wrap {
+  font-size: 0;
+  margin-bottom: 29px;
+}
+
+.feedback__control {
+  width: 50%;
+  display: inline-block;
+
+  background: none;
+  border: 1px solid #ececec;
+  height: 52px;
+}
+
+.feedback__control--next {
+  margin-left: -1px;
+}
+
+.feedback__button {
+  margin-bottom: 50px;
+}
+
+@media (min-width: @tablet-width) {
+  .feedback__wrapper {
+    .wrapper-tab();
+    padding-top: 69px;
+    padding-bottom: 17px;
+    position: relative;
+  }
+
+  .feedback__title {
+    font-size: 42px;
+    line-height: 50px;
+    margin-left: -5px;
+    margin-bottom: 47px;
+  }
+
+  .feedback-item__text {
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 58px;
+  }
+
+  .feedback-item__name {
+    font-size: 18px;
+    line-height: 24px;
+
+    width: 334px;
+  }
+
+  .feedback__controrols-wrap {
+    position: absolute;
+    right: 4px;
+    bottom: 37px;
+    margin: 0;
+  }
+
+  .feedback__control {
+    width: 83px;
+    background-color: red;
+  }
+
+  .feedback__button {
+    position: absolute;
+    right: 0;
+    top: 107px;
+    padding: 12px 38px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback__wrapper {
+    .wrapper-desk();
+    padding-top: 62px;
+    padding-bottom: 68px;
+    position: relative;
+    padding-left: 175px;
+  }
+
+  .feedback__title {
+    font-size: 53px;
+    line-height: 57px;
+    margin-bottom: 46px;
+  }
+
+  .feedback-item__text {
+    padding-right: 85px;
+    margin-bottom: 39px;
+  }
+
+  .feedback-item__name {
+    display: block;
+    font-size: 17px;
+    line-height: 24px;
+    margin-bottom: 2px;
+  }
+
+  .feedback__controrols-wrap {
+    bottom: 89px;
+  }
+
+  .feedback__button {
+    top: 114px;
+  }
 }

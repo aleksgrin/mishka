@@ -1,9 +1,17 @@
 .contacts__wrapper {
   .wrapper-mob();
+  padding-top: 21px;
+  padding-bottom: 39px;
 }
 
 .contacts__title {
-  .title();
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 26px;
+}
+
+.contacts__email-wrap {
+  margin-bottom: 30px;
 }
 
 .contacts__email,
@@ -11,4 +19,123 @@
   font-size: 15px;
   line-height: 30px;
   color: @col-grey;
+
+  width: 72px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.contacts__adress-link,
+.contacts__email-link {
+  font-size: 15px;
+  line-height: 30px;
+  color: @col-grey;
+
+  width: 180px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.contacts__email-link--underline {
+  border-bottom: 1px solid #62d1ba;
+}
+
+.contacts__adress-wrap {
+  margin-bottom: 36px;
+}
+
+.contacts__map {
+  margin-bottom: 41px;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__wrapper {
+    .wrapper-tab();
+    padding-top: 112px;
+    padding-bottom: 57px;
+  }
+
+  .contacts__title {
+    font-size: 43px;
+    line-height: 50px;
+    margin-left: -5px;
+    margin-bottom: 35px;
+  }
+
+  .contacts__email,
+  .contacts__adress,
+  .contacts__email-link,
+  .contacts__adress-link {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .contacts__email-link,
+  .contacts__adress-link {
+    width: 202px;
+  }
+
+  .contacts__email-wrap,
+  .contacts__adress-wrap {
+    display: inline-block;
+
+    margin-bottom: 55px;
+  }
+
+  .contacts__email-wrap {
+    margin-right: 52px;
+  }
+
+  .contacts__adress-link {
+    width: 230px;
+  }
+
+  .contacts__map {
+    margin-bottom: 56px;
+  }
+
+  .contacts__button {
+    width: 230px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts__wrapper {
+    .wrapper-desk();
+    padding-top: 185px;
+    padding-bottom: 103px;
+    padding-left: 176px;
+    position: relative;
+  }
+
+  .contacts__title {
+    font-size: 53px;
+    line-height: 57px;
+    margin-bottom: 49px;
+  }
+
+  .contacts__email-wrap,
+  .contacts__adress-wrap {
+    width: 350px;
+  }
+
+  .contacts__email-wrap {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  .contacts__adress-wrap {
+    margin-bottom: 80px;
+  }
+
+  .contacts__map {
+    position: absolute;
+    right: 0;
+    top: 158px;
+  }
+
+  .contacts__button {
+    margin: 0;
+  }
 }

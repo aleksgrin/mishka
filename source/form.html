@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -9,27 +10,34 @@
   <header class="header">
     <div class="header__wrapper">
       <a class="header__logo-link" href="index.html">
-        <img class="header__logo-img" src="http://placehold.it/150x100">
+        <img class="header__logo-img" src="">
       </a>
       <button class="header__toggle header__toggle--open">
         <span class="visually-hidden">Раскрыть меню</span>
       </button>
       <ul class="header__menu-list">
-        <li class="header__menu-item">
+        <li class="header__menu-item header__menu-item--out">
           <a class="header__menu-link" href="catalog.html">Каталог товаров</a>
         </li>
-        <li class="header__menu-item">
+        <li class="header__menu-item header__menu-item--out">
           <a class="header__menu-link">Вязание на заказ</a>
         </li>
-      </ul>
-      <ul class="header__menu-list">
-        <li class="header__user-list-item header__user-list-item--search">
-          <a class="header__menu-link" href="#">Поиск по сайту</a>
+        <li class="header__menu-item header__menu-item--search">
+          <a class="header__menu-link" href="#"><span class="header__search">Поиск по сайту</span></a>
         </li>
-        <li class="header__user-list-item header__user-list-item--cart">
-          <a class="header__menu-link" href="#">Корзина</a>
+        <li class="header__menu-item header__menu-item--cart">
+          <a class="header__menu-link" href="#">Корзина: пока пуста</a>
         </li>
       </ul>
+      <ul class="header__product-menu header__product-menu--out">
+        <li class="header__product-menu-item">
+          <a class="header__product-menu-link" href="#">Новые поступления</a>
+        </li>
+        <li class="header__product-menu-item">
+          <a class="header__product-menu-link" href="#">Распродажа</a>
+        </li>
+      </ul>
+      <span class="header__delivery header__delivery--out">Бесплатная доставка по России</span>
     </div>
   </header>
   <main class="main">
@@ -39,12 +47,14 @@
       </div>
     </section>
     <section class="form">
-      <div class="form__wrapper">
-        <form action="https://echo.htmlacademy.ru" method="POST">
+      <form action="https://echo.htmlacademy.ru" method="POST">
+        <div class="form__wrapper">
           <p class="form__description">
             Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
           </p>
-          <fieldset class="form__type-group">
+        </div>
+        <fieldset class="form__type-group">
+          <div class="form__type-group-wrap">
             <h2 class="form__title">Тип</h2>
             <ul class="form__type-list">
               <li class="form__type-item">
@@ -58,26 +68,28 @@
                 <label class="form__type-label" for="type-toy">Детская игрушка</label>
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="form__color-group">
-            <h2 class="form__title">Цвет</h2>
+          </div>
+        </fieldset>
+        <fieldset class="form__color-group">
+          <div class="form__color-group-wrap">
+            <h2 class="form__title form__title--color">Цвет</h2>
             <ul class="form__color-list">
               <li class="form__color-item">
                 <input class="visually-hidden" type="checkbox" name="color" id="type-white">
                 <span class="checkbox"></span>
                 <label class="form__color-label" for="type-white">Белый</label>
               </li>
-              <li class="form__color-item">
+              <li class="form__color-item form__color-item--right">
                 <input class="visually-hidden" type="checkbox" name="color" id="type-grey">
                 <span class="checkbox"></span>
                 <label class="form__color-label" for="type-grey">Серый</label>
               </li>
-              <li class="form__color-item">
+              <li class="form__color-item form__color-item--marg-null">
                 <input class="visually-hidden" type="checkbox" name="color" id="type-tiff">
                 <span class="checkbox"></span>
                 <label class="form__color-label" for="type-tiff">«Тиффани»</label>
               </li>
-              <li class="form__color-item">
+              <li class="form__color-item form__color-item--right">
                 <input class="visually-hidden" type="checkbox" name="color" id="type-black">
                 <span class="checkbox"></span>
                 <label class="form__color-label" for="type-black">Черный</label>
@@ -87,48 +99,63 @@
                 <span class="checkbox"></span>
                 <label class="form__color-label" for="type-pink">Розовый</label>
               </li>
-              <li class="form__color-item">
+              <li class="form__color-item form__color-item--right form__color-item--marg-null">
                 <input class="visually-hidden" type="checkbox" name="color" id="type-orange">
                 <span class="checkbox"></span>
-                <label class="form__color-label" for="type-orange">Оранжевый</label>
+                <label class="form__color-label form__color-label--last" for="type-orange">Оранжевый</label>
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="form__name-group">
-            <h2 class="form__title">ФИО</h2>
-            <p>
-              <label class="form__name-label" for="name">Имя:</label>
-              <input class="form__text-inp" type="text" name="name" id="name" placeholder="Введите ваше имя*">
-            </p>
-            <p>
-              <label class="form__name-label" for="surname">Фамилия:</label>
-              <input class="form__text-inp" type="text" name="surname" id="surname" placeholder="Укажите фамилию*">
-            </p>
-            <p>
-              <label class="form__name-label" for="patronymic">Отчество:</label>
-              <input class="form__text-inp" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
-            </p>
-          </fieldset>
-          <fieldset class="form__tel">
-            <h2 class="form__title">Тел</h2>
+          </div>
+        </fieldset>
+        <fieldset class="form__name-group">
+          <div class="form__name-group-wrap">
+            <h2 class="form__title form__title--name">ФИО</h2>
+            <div class="form__name-info-wrap">
+              <p class="form__name-wrap">
+                <label class="form__name-label" for="name">Имя:</label>
+                <input class="form__text-inp" type="text" name="name" id="name" placeholder="Введите ваше имя*">
+              </p>
+              <p class="form__name-wrap">
+                <label class="form__name-label" for="surname">Фамилия:</label>
+                <input class="form__text-inp" type="text" name="surname" id="surname" placeholder="Укажите фамилию*">
+              </p>
+              <p class="form__name-wrap form__name-wrap--last">
+                <label class="form__name-label" for="patronymic">Отчество:</label>
+                <input class="form__text-inp" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+              </p>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="form__tel">
+          <div class="form__tel-wrap">
+            <h2 class="form__title form__title--tel">Тел</h2>
             <input class="form__text-inp form__text-inp--tel" type="tel" name="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
-          </fieldset>
-          <fieldset class="form__mail">
-            <h2 class="form__title">E-mail</h2>
+          </div>
+        </fieldset>
+        <fieldset class="form__mail">
+          <div class="form__mail-wrap">
+            <h2 class="form__title form__title--mail">E-mail</h2>
             <input class="form__text-inp form__text-inp--mail" type="email" name="email" placeholder="Ваш Email*">
-          </fieldset>
-          <fieldset class="form__add">
-            <h2 class="form__title">Доп</h2>
+          </div>
+        </fieldset>
+        <fieldset class="form__add">
+          <div class="form__add-wrap">
+            <h2 class="form__title form__title--add">Доп</h2>
             <textarea class="form__textarea" placeholder="Опишите все ваши пожелания к заказу"></textarea>
-          </fieldset>
+          </div>
+        </fieldset>
+        <div class="form__bottom">
           <span class="form__note"><sup>*</sup>Поля обязательны для заполнения</span>
           <button class="form__button button" type="submit">Отправить заказ</button>
-        </form>
-      </div>
+        </div>
+      </form>
     </section>
   </main>
   <footer class="footer">
     <div class="footer__wrapper">
+      <a class="footer__logo">
+        <img src="http://placehold.it/105x50">
+      </a>
       <ul class="social">
         <li class="social__item">
           <a href="#">
@@ -148,7 +175,7 @@
       </ul>
       <div class="footer__copyright">
         <span class="footer__develop">Разработано</span>
-        <a class="footer__developer-logo" href="https://htmlacademy.ru/intensive/adaptive"><img src="http://placehold.it/150x100"></a>
+        <a class="footer__developer-logo" href="https://htmlacademy.ru/intensive/adaptive"><img src="http://placehold.it/30x38"></a>
       </div>
     </div>
   </footer>

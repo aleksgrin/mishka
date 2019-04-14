@@ -1,15 +1,73 @@
 .form__wrapper {
   .wrapper-mob();
+  padding-top: 9px;
+}
+
+.form__type-group-wrap,
+.form__color-group-wrap,
+.form__name-group-wrap,
+.form__tel-wrap,
+.form__mail-wrap,
+.form__add-wrap,
+.form__bottom {
+  .wrapper-mob();
 }
 
 .form__description {
   font-size: 13px;
   line-height: 24px;
   color: @col-grey;
+
+  margin-bottom: 11px;
+}
+
+.form__type-group,
+.form__color-group,
+.form__name-group,
+.form__tel,
+.form__mail,
+.form__add {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 7px;
+  border: none;
 }
 
 .form__title {
   .form-title();
+
+  &--color {
+    margin-bottom: 37px;
+  }
+
+  &--name {
+    margin-bottom: 30px;
+  }
+
+  &--tel {
+    margin-bottom: 10px;
+  }
+
+  &--mail {
+    margin-bottom: 10px;
+  }
+
+  &--add {
+    margin-bottom: 25px;
+  }
+
+  margin-bottom: 34px;
+}
+
+.form__tel {
+  margin-bottom: 19px;
+}
+
+.form__type-list,
+.form__color-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .form__type-label,
@@ -18,21 +76,349 @@
   .form-label();
 }
 
+.form__type-label,
+.form__color-label {
+  padding-left: 62px;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.form__color-label {
+  &--last {
+    margin-bottom: 0;
+  }
+
+  margin-bottom: 43px;
+}
+
+.form__color-group {
+  margin-bottom: 27px;
+}
+
+.form__name-label {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.form__text-inp {
+  border: none;
+  padding: 15px 0;
+  border-bottom: 2px solid #000000;
+  border-top: 2px solid transparent;
+  width: 100%;
+}
+
+.form__name-wrap {
+  &--last {
+    margin-bottom: 0;
+  }
+
+  margin-bottom: 22px;
+}
+
+.form__name-group {
+  margin-bottom: 20px;
+}
+
+.form__mail {
+  margin-bottom: 19px;
+}
+
+.form__textarea {
+  width: 100%;
+  height: 142px;
+  border: 2px solid #000000;
+  padding: 13px 15px;
+}
+
+.form__add {
+  margin-bottom: 5px;
+}
+
 .form__text-inp::placeholder,
 .form__textarea::placeholder {
   .form-placeholder();
 }
 
 .form__text-inp--mail::placeholder {
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .form__note {
   font-size: 14px;
   line-height: 16px;
   color: @col-grey;
+
+  display: block;
+  margin-bottom: 31px;
 }
 
 .form__button {
   text-transform: uppercase;
+  width: 100%;
+}
+
+.form__bottom {
+  margin-bottom: 55px;
+}
+
+@media (min-width: @tablet-width) {
+  .form__wrapper {
+    .wrapper-tab();
+    padding-top: 55px;
+    padding-bottom: 0;
+  }
+
+  .form__description {
+    font-size: 17px;
+    line-height: 30px;
+
+    margin-bottom: 56px;
+  }
+
+  .form__type-group {
+    margin-bottom: 30px;
+  }
+
+  .form__type-group-wrap {
+    .wrapper-tab();
+
+    display: flex;
+  }
+
+  .form__title {
+    font-size: 17px;
+    line-height: 30px;
+    width: 167px;
+    margin: 0;
+    margin-top: 13px;
+  }
+
+  .form__type-label {
+    font-size: 19px;
+    line-height: 18px;
+    padding: 18px 0 18px 81px;
+    margin-bottom: 21px;
+  }
+
+  .form__type-list {
+    width: 501px;
+  }
+
+  .form__color-group {
+    background-color: #f1f1f1;
+    margin-bottom: 52px;
+  }
+
+  .form__color-group-wrap {
+    .wrapper-tab();
+
+    display: flex;
+    padding-top: 48px;
+    padding-bottom: 27px;
+  }
+
+  .form__color-list {
+    width: 501px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .form__color-item {
+    &--right {
+      margin-left: auto;
+    }
+    width: 240px;
+    margin-bottom: 22px;
+  }
+
+  .form__color-label {
+    font-size: 19px;
+    line-height: 18px;
+    padding: 18px 0 18px 81px;
+    margin-bottom: 0;
+  }
+
+  .form__name-group {
+    margin-bottom: 25px;
+  }
+
+  .form__name-group-wrap {
+    .wrapper-tab();
+    display: flex;
+  }
+
+  .form__title--name {
+    margin-top: 10px;
+  }
+
+  .form__name-info-wrap {
+    width: 501px;
+  }
+
+  .form__name-label {
+    font-size: 19px;
+    line-height: 18px;
+    margin-right: 25px;
+  }
+
+  .form__name-wrap {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 27px;
+  }
+
+  .form__text-inp {
+    padding-left: 16px;
+  }
+
+  .form__text-inp::placeholder,
+  .form__textarea::placeholder {
+    font-size: 19px;
+    line-height: 18px;
+  }
+
+  .form__tel {
+    background-color: #f1f1f1;
+    margin-bottom: 0;
+  }
+
+  .form__tel-wrap {
+    .wrapper-tab();
+    padding-top: 48px;
+    display: flex;
+  }
+
+  .form__text-inp--tel {
+    background-color: #f1f1f1;
+    margin-left: 43px;
+    margin-top: 5px;
+  }
+
+  .form__mail {
+    background-color: #f1f1f1;
+  }
+
+  .form__mail-wrap {
+    .wrapper-tab();
+    display: flex;
+    padding-top: 22px;
+    padding-bottom: 50px;
+  }
+
+  .form__text-inp--mail {
+    background-color: #f1f1f1;
+    margin-left: 43px;
+    margin-top: 5px;
+  }
+
+  .form__add {
+    margin-bottom: 54px;
+  }
+
+  .form__add-wrap {
+    .wrapper-tab();
+    display: flex;
+    padding-top: 30px;
+  }
+
+  .form__textarea {
+    margin-left: 43px;
+  }
+
+  .form__bottom {
+    .wrapper-tab();
+    display: flex;
+    align-items: center;
+    margin-bottom: 49px;
+  }
+
+  .form__button {
+    width: 231px;
+    order: -1;
+  }
+
+  .form__note {
+    font-size: 17px;
+    line-height: 30px;
+    margin-left: auto;
+    margin-bottom: 8px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__wrapper {
+    .wrapper-desk();
+    padding-top: 124px;
+    padding-bottom: 0;
+  }
+
+  .form__description {
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 55px;
+  }
+
+  .form__type-group-wrap {
+    .wrapper-desk();
+  }
+
+  .form__title {
+    width: 175px;
+    text-align: center;
+  }
+
+  .form__color-group-wrap {
+    .wrapper-desk();
+  }
+
+  .form__color-list {
+    width: 875px;
+  }
+
+  .form__color-item--right {
+    margin-left: 0;
+  }
+
+  .form__color-item {
+    width: 210px;
+    margin-right: 53px;
+  }
+
+  .form__color-item--marg-null {
+    margin-right: 0;
+  }
+
+  .form__name-group-wrap {
+    .wrapper-desk();
+  }
+
+  .form__name-info-wrap {
+    width: 700px;
+  }
+
+  .form__tel-wrap,
+  .form__mail-wrap,
+  .form__add-wrap {
+    .wrapper-desk();
+    padding-right: 175px;
+  }
+
+  .form__bottom {
+    .wrapper-desk();
+    padding-left: 175px;
+    padding-right: 175px;
+    margin-bottom: 50px;
+  }
+
+  .form__text-inp--tel,
+  .form__text-inp--mail,
+  .form__textarea {
+    margin-left: 36px;
+  }
+
+  .form__add {
+    margin-bottom: 50px;
+  }
 }

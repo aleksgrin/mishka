@@ -1,5 +1,31 @@
 .goods__wrapper {
   .wrapper-mob();
+  padding-top: 31px;
+}
+
+.goods__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.goods__item {
+  border: 1px solid #ededed;
+  margin-bottom: 30px;
+}
+
+.goods__image-link {
+  display: block;
+}
+
+.goods__description-wrap {
+  padding-left: 27px;
+  padding-top: 5px;
+}
+
+.goods__title {
+  margin-bottom: 4px;
+  padding-right: 35px;
 }
 
 .goods__title-link {
@@ -12,10 +38,134 @@
   color: @col-grey;
 
   display: block;
+  margin-bottom: 20px;
+}
+
+.goods__buy-wrap {
+  border-top: 1px solid #ededed;
+  width: 205px;
+  padding-top: 20px;
+  padding-bottom: 27px;
+  display: flex;
 }
 
 .goods__cost {
   font-weight: bold;
   font-size: 15px;
   line-height: 24px;
+}
+
+.goods__button {
+  margin-left: auto;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: none;
+  background-color: red;
+}
+
+@media (min-width: @tablet-width) {
+  .goods__wrapper {
+    .wrapper-tab();
+    padding-top: 80px;
+  }
+
+  .goods__item {
+    margin-bottom: 54px;
+  }
+
+  .goods__title {
+    padding-right: 75px;
+  }
+
+  .goods__title-link {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .goods__article {
+    display: flex;
+  }
+
+  .goods__image-link {
+    width: 50%;
+    height: 332px;
+    background-color: gold;
+  }
+
+  .goods__description-wrap {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 8px;
+    width: 50%;
+  }
+
+  .goods__description {
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  .goods__buy-wrap {
+    margin-top: auto;
+    width: 270px;
+    margin-left: 5px;
+  }
+
+  .goods__cost {
+    font-size: 17px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .goods__wrapper {
+    .wrapper-desk();
+    padding-top: 130px;
+  }
+
+  .goods__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .goods__item {
+    width: 316px;
+  }
+
+  .goods__article {
+    box-sizing: border-box;
+    display: block;
+    height: 100%;
+  }
+
+  .goods__image-link {
+    width: 314px;
+    height: 462px;
+  }
+
+  .goods__description-wrap {
+    width: auto;
+    padding-top: 10px;
+    padding-bottom: 25px;
+
+    min-height: 196px;
+  }
+
+  .goods__title {
+    padding-right: 55px;
+  }
+
+  .goods__description {
+    margin-bottom: 0;
+  }
+
+  .goods__buy-wrap {
+    padding: 0;
+    margin-left: 0;
+
+    width: 256px;
+    padding-top: 23px;
+  }
 }
