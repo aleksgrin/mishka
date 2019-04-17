@@ -31,18 +31,22 @@
   line-height: 24px;
   color: #444444;
 
-  margin-left: -2px;
   margin-bottom: 30px;
+
+  // width: 236px;
+  width: 90.8%;
+  border-spacing: 0;
 }
 
 .week-product__data {
   border-bottom: 1px solid #ececec;
   border-top: 1px solid transparent;
-  padding: 6px 0;
+  padding: 7px 0;
 }
 
 .week-product__data--small {
-  width: 95px;
+  // width: 95px;
+  width: 40.3%;
 }
 
 .week-product__image {
@@ -63,7 +67,7 @@
   margin-bottom: 25px;
 }
 
-@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+@media (min-width: @tablet-width) {
   .week-product__wrapper {
     .wrapper-tab();
 
@@ -73,7 +77,8 @@
   .week-product__title {
     font-size: 43px;
     line-height: 50px;
-    width: 500px;
+    // width: 500px;
+    width: 65.1%;
     margin-top: 50px;
     margin-left: -4px;
     margin-bottom: 49px;
@@ -83,7 +88,7 @@
     line-height: 17px;
     position: absolute;
     top: 11px;
-    right: 3px;
+    right: 53px;
     width: 120px;
     text-align: center;
   }
@@ -100,19 +105,33 @@
   }
 
   .week-product__half {
-    width: 334px;
+    // width: 334px;
+    width: 50%;
     padding-right: 43px;
+  }
+
+  .week-product__table {
+    margin-bottom: 56px;
+    width: 100%;
+  }
+
+  .week-product__data {
+    width: auto;
+  }
+
+  .week-product__data--small {
+    // width: 97px;
+    width: 33%;
   }
 
   .week-product__image {
     margin: 0;
     position: absolute;
-    right: 0;
+    right: 50px;
     bottom: 0;
-  }
 
-  .week-product__table {
-    margin-bottom: 56px;
+    width: 333px;
+    height: 404px;
   }
 
   .week-product__cost {
@@ -127,7 +146,7 @@
     .wrapper-desk();
 
     position: relative;
-    padding-left: 175px;
+    padding-left: 225px;
   }
 
   .week-product__title {
@@ -144,12 +163,13 @@
     position: absolute;
     width: 120px;
     text-align: center;
-    left: 23px;
+    left: 23px + 50px;
     top: 15px;
   }
 
   .week-product__half {
-    width: 350px;
+    // width: 350px;
+    width: 40%;
     padding-right: 60px;
   }
 
@@ -157,7 +177,7 @@
     font-size: 17px;
     line-height: 30px;
 
-    margin-bottom: 46px;
+    margin-bottom: 48px;
   }
 
   .week-product__table {
@@ -173,8 +193,12 @@
 
   .week-product__image {
     position: absolute;
-    right: 0;
+    right: 50px;
     bottom: 0;
     margin: 0;
+
+    width: 525px;
+    height: 636px;
+    z-index: -1;
   }
 }
