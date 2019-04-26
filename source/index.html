@@ -60,16 +60,21 @@
         <h1 class="intro__title">Милые штуки ручной <br> работы для дома</h1>
         <ul class="intro__list">
           <li class="intro__item intro__item--interrior">
-            <a class="intro__item-link" href="#">Предметы интерьера</a>
+            <a class="intro__item-link intro__item-link--interrior" href="#">
+            <span>Предметы интерьера</span>
             <svg class="intro__item-svg intro__item-svg--interrior" width="40" height="60">
               <use xlink:href="img/sprite.svg#icon-interrior"></use>
             </svg>
+          </a>
           </li>
           <li class="intro__item intro__item--toys">
-            <a class="intro__item-link" href="#">Детские игрушки</a>
+            <a class="intro__item-link intro__item-link--toys" href="#">
+            <span>Детские игрушки</span>
             <svg class="intro__item-svg intro__item-svg--toys" width="60" height="60">
               <use href="img/sprite.svg#icon-toys" xlink:href="img/sprite.svg#icon-toys"></use>
             </svg>
+          </a>
+
           </li>
         </ul>
       </div>
@@ -183,7 +188,7 @@
         <li class="social__item">
           <a class="social__item-link" href="#">
             <span class="visually-hidden">instagram</span>
-            <svg width="21.769px" height="21.334px">
+            <svg class="social__item-svg" width="21.769px" height="21.334px" fill="#231F20">
               <use xlink:href="img/sprite.svg#icon-instagram"></use>
             </svg>
           </a>
@@ -191,7 +196,7 @@
         <li class="social__item">
           <a class="social__item-link" href="#">
             <span class="visually-hidden">facebook</span>
-            <svg width="14.962px" height="27.718px">
+            <svg class="social__item-svg" width="14.962px" height="27.718px" fill="#231F20">
               <use xlink:href="img/sprite.svg#icon-facebook"></use>
             </svg>
           </a>
@@ -199,16 +204,16 @@
         <li class="social__item">
           <a class="social__item-link" href="#">
             <span class="visually-hidden">twitter</span>
-            <svg width="23.494px" height="20.168px">
+            <svg class="social__item-svg" width="23.494px" height="20.168px" fill="#231F20">
               <use xlink:href="img/sprite.svg#icon-twitter"></use>
             </svg>
           </a>
         </li>
       </ul>
       <div class="footer__copyright">
-        <span class="footer__develop">Разработано</span>
-        <a class="footer__developer-logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg width="26.943px" height="34.09px">
+        <a class="footer__developer-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="footer__develop">Разработано</span>
+          <svg class="footer__developer-svg" width="26.943px" height="34.09px"  fill="#63d1bb">
             <use xlink:href="img/sprite.svg#developer-logo"></use>
           </svg>
         </a>

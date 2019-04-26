@@ -40,6 +40,14 @@
 }
 
 .feedback__control {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   width: 50%;
   display: inline-block;
 
@@ -54,12 +62,13 @@
 
 @media (min-width: @tablet-width) {
   .feedback {
-    padding-bottom: 103px;
+    padding-bottom: 86px;
   }
 
   .feedback__wrapper {
     .wrapper-tab();
     padding-top: 69px;
+    padding-bottom: 18px;
     position: relative;
 
     background-image: url("../img/review@1x.jpg");

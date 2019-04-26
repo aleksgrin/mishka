@@ -4,6 +4,14 @@
 }
 
 .header__logo-link {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   height: 79px;
   display: flex;
   justify-content: center;
@@ -26,8 +34,20 @@
 }
 
 .header__menu-link:hover {
-  .header__search-svg {
+  .header__search-svg,
+  .header__cart-svg {
     fill: #63d1bb;
+  }
+}
+
+.header__menu-link[href],
+.header__product-menu-link[href] {
+  &:hover {
+    color: rgba(0,0,0,0.6);
+  }
+
+  &:active {
+    color: rgba(0,0,0,0.3);
   }
 }
 
@@ -97,7 +117,7 @@
     // width: 321px;
     width: 41.8%;
     position: absolute;
-    z-index: -1;
+    z-index: 2;
     display: block;
   }
 
@@ -195,7 +215,6 @@
   }
 
   .header__logo-link {
-    position: absolute;
     width: 149px;
     height: 72px;
     left: 50%;

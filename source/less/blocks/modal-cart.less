@@ -34,6 +34,18 @@
 }
 
 .modal-cart__size-item {
+  &--active {
+    border-color: @col-turquoise;
+  }
+
+  &:not(.modal-cart__size-item--active):hover {
+    border-color: #c7c7c7;
+  }
+
+  &:not(.modal-cart__size-item--active):active {
+    border-color: #62d1ba;
+  }
+
   font-weight: bold;
   font-size: 17px;
   line-height: 16px;
@@ -42,10 +54,6 @@
   border: 2px solid #ececec;
   width: 82px;
   height: 52px;
-
-  &--active {
-    border-color: @col-turquoise;
-  }
 
   display: flex;
   justify-content: center;

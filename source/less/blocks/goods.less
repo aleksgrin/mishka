@@ -10,6 +10,14 @@
 }
 
 .goods__item {
+  &:hover {
+    box-shadow: 0 8px 8px 2px #ececec;
+  }
+
+  &:active {
+    box-shadow: 0 2px 8px 2px #ececec;
+  }
+
   border: 1px solid #ededed;
   margin-bottom: 30px;
 }
@@ -33,6 +41,14 @@
 }
 
 .goods__title-link {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   .item-title();
 }
 
@@ -61,6 +77,18 @@
 }
 
 .goods__button {
+  &:hover {
+    background: none;
+
+    .goods__button-svg {
+      fill: #63d1bb;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   padding: 0;
   margin-left: auto;
   width: 20px;

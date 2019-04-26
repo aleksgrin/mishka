@@ -25,13 +25,6 @@
 }
 
 .intro__item {
-  &--interrior {
-    background-color: @col-turquoise;
-  }
-
-  &--toys {
-    background-color: #56c3b2;
-  }
   position: relative;
 }
 
@@ -50,6 +43,14 @@
 }
 
 .intro__item-link {
+  &--interrior {
+    background-color: @col-turquoise;
+  }
+
+  &--toys {
+    background-color: #56c3b2;
+  }
+
   display: block;
 
   font-weight: bold;
@@ -59,6 +60,7 @@
 
   padding: 26px 150px 29px 30px;
 }
+
 
 .intro__list {
   list-style: none;
@@ -135,11 +137,15 @@
 
   .intro__wrapper {
     .wrapper-desk();
+
+    height: 742px;
+    display: flex;
+    flex-direction: column;
   }
 
   .intro__title {
     margin-top: 150px;
-    margin-bottom: 360px;
+    margin-bottom: 0;
     font-size: 53px;
     line-height: 57px;
     text-align: center;
@@ -147,15 +153,49 @@
   }
 
   .intro__list {
+    margin-top: auto;
     display: flex;
+    align-items: flex-end;
   }
 
   .intro__item-link {
+    &--interrior:hover {
+      padding-bottom: 29px + 5px;
+      background-color: #59d5bc;
+    }
+
+    &--toys:hover {
+      padding-bottom: 29px + 5px;
+      background-color: #46c1ae;
+    }
+
+    &--interrior:active,
+    &--toys:active {
+      padding-bottom: 29px + 5px;
+      color: rgba(255,255,255,0.3);
+    }
+
     display: block;
     font-size: 20px;
     line-height: 30px;
     margin: 0;
     padding-left: 37px;
     padding-right: 320px;
+  }
+
+  .intro__item-link--interrior:hover .intro__item-svg--interrior {
+    opacity: 0.7;
+  }
+
+  .intro__item-link--toys:hover .intro__item-svg--toys {
+    opacity: 0.7;
+  }
+
+  .intro__item-link--interrior:active .intro__item-svg--interrior {
+    opacity: 0.3;
+  }
+
+  .intro__item-link--toys:active .intro__item-svg--toys {
+    opacity: 0.3;
   }
 }
