@@ -161,12 +161,16 @@
   .goods__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
   }
 
   .goods__item {
     // width: 316px;
-    width: 30.1%;
+    width: 30%;
+    margin-right: 51px;
+  }
+
+  .goods__item:nth-child(3n) {
+    margin-right: 0;
   }
 
   .goods__article {

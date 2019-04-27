@@ -111,6 +111,7 @@
 
   .intro__list {
     display: flex;
+    flex-wrap: wrap;
   }
 
   .intro__item {
@@ -141,6 +142,8 @@
     background-repeat: no-repeat;
     background-position: center -2px;
     background-size: 1150px auto;
+    max-width: 1150px;
+    margin: 0 auto;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../../img/hero-desktop@2x.jpg");

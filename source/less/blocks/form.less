@@ -418,12 +418,13 @@ input[type="checkbox"]:checked ~ .form__checkbox::before {
   }
 
   .form__color-item {
-    &--right {
-      margin-left: auto;
-    }
     // width: 240px;
     width: 47.9%;
     margin-bottom: 22px;
+  }
+
+  .form__color-item:nth-child(2n) {
+    margin-left: auto;
   }
 
   .form__color-label {
@@ -455,6 +456,7 @@ input[type="checkbox"]:checked ~ .form__checkbox::before {
     font-size: 19px;
     line-height: 18px;
     margin-right: 25px;
+    max-width: 400px;
   }
 
   .form__name-wrap {
@@ -590,9 +592,17 @@ input[type="checkbox"]:checked ~ .form__checkbox::before {
     margin-right: 53px;
   }
 
-  .form__color-item--marg-null {
+  .form__color-item:nth-child(2n) {
+    margin-left: 0;
+  }
+
+  .form__color-item:nth-child(3n) {
     margin-right: 0;
   }
+
+  // .form__color-item--marg-null {
+  //   margin-right: 0;
+  // }
 
   .form__name-group-wrap {
     .wrapper-desk();
