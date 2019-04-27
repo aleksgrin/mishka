@@ -4,6 +4,14 @@
 }
 
 .header__logo-link {
+  &[href]:hover {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+
   height: 79px;
   display: flex;
   justify-content: center;
@@ -25,6 +33,24 @@
   padding-left: 46px;
 }
 
+.header__menu-link:hover {
+  .header__search-svg,
+  .header__cart-svg {
+    fill: #63d1bb;
+  }
+}
+
+.header__menu-link[href],
+.header__product-menu-link[href] {
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
 .header__menu-item--search,
 .header__menu-item--cart {
   position: relative;
@@ -38,6 +64,16 @@
 }
 
 .header__toggle {
+  &--close {
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='20.514px' height='20.512px' viewBox='0 0 20.514 20.512' enable-background='new 0 0 20.514 20.512' xml:space='preserve'%3E%3Cpolygon fill='%23231F20' points='20.513,1.414 19.099,0 10.256,8.842 1.414,0 0,1.414 8.842,10.256 0,19.098 1.414,20.512 10.256,11.67 19.099,20.512 20.513,19.098 11.671,10.256 '/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+  }
+
+  &--open {
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='19.958px' height='14px' viewBox='0 0 19.958 14' enable-background='new 0 0 19.958 14' xml:space='preserve'%3E%3Crect fill='%23231F20' width='19.958' height='2'/%3E%3Crect y='6' fill='%23231F20' width='19.958' height='2'/%3E%3Crect y='12' fill='%23231F20' width='19.958' height='2'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+  }
+
   background: none;
   border: none;
   position: absolute;
@@ -65,6 +101,7 @@
   right: 50px;
   padding: 15px 0;
   display: none;
+  z-index: 3;
 }
 
 @media (min-width: @tablet-width) {
@@ -81,7 +118,7 @@
     // width: 321px;
     width: 41.8%;
     position: absolute;
-    z-index: -1;
+    z-index: 2;
     display: block;
   }
 
@@ -134,6 +171,7 @@
     width: 21.7%;
     top: 91px;
     min-height: auto;
+    z-index: 3;
   }
 
   .header__menu-item:nth-child(2) {
@@ -179,7 +217,6 @@
   }
 
   .header__logo-link {
-    position: absolute;
     width: 149px;
     height: 72px;
     left: 50%;
@@ -263,6 +300,7 @@
   .header__product-menu--out {
     position: absolute;
     top: 105px;
+    z-index: 3;
   }
 
   .header__product-menu-item {

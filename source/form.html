@@ -10,7 +10,11 @@
   <header class="header">
     <div class="header__wrapper">
       <a class="header__logo-link" href="index.html">
-        <img class="header__logo-img" src="">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="header__logo-img" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Mishka">
+        </picture>
       </a>
       <button class="header__toggle header__toggle--open">
         <span class="visually-hidden">Раскрыть меню</span>
@@ -23,10 +27,20 @@
           <a class="header__menu-link">Вязание на заказ</a>
         </li>
         <li class="header__menu-item header__menu-item--search">
-          <a class="header__menu-link" href="#"><span class="header__search">Поиск по сайту</span></a>
+          <a class="header__menu-link" href="#">
+            <span class="header__search">Поиск по сайту</span>
+            <svg class="header__search-svg" width="17.6" height="17.6" fill="#d3d2d2">
+              <use href="img/sprite.svg#icon-search"></use>
+            </svg>
+          </a>
         </li>
         <li class="header__menu-item header__menu-item--cart">
-          <a class="header__menu-link" href="#">Корзина: пока пуста</a>
+          <a class="header__menu-link" href="#">
+            <span>Корзина: пока пуста</span>
+            <svg class="header__cart-svg" width="20" height="19" fill="#d3d2d2">
+              <use href="img/sprite.svg#icon-cart" xlink:href="img/sprite.svg#icon-cart"></use>
+            </svg>
+          </a>
         </li>
       </ul>
       <ul class="header__product-menu header__product-menu--out">
@@ -58,14 +72,14 @@
             <h2 class="form__title">Тип</h2>
             <ul class="form__type-list">
               <li class="form__type-item">
-                <input class="visually-hidden" type="radio" name="type" id="type-accessory">
-                <span class="radio"></span>
+                <input class="visually-hidden" type="radio" name="type" id="type-accessory" checked>
                 <label class="form__type-label" for="type-accessory">Аксессуар для интерьера</label>
+                <span class="form__radio"></span>
               </li>
               <li class="form__type-item">
                 <input class="visually-hidden" type="radio" name="type" id="type-toy">
-                <span class="radio"></span>
                 <label class="form__type-label" for="type-toy">Детская игрушка</label>
+                <span class="form__radio"></span>
               </li>
             </ul>
           </div>
@@ -75,34 +89,34 @@
             <h2 class="form__title form__title--color">Цвет</h2>
             <ul class="form__color-list">
               <li class="form__color-item">
-                <input class="visually-hidden" type="checkbox" name="color" id="type-white">
-                <span class="checkbox"></span>
+                <input class="visually-hidden" type="checkbox" name="color" id="type-white" checked>
                 <label class="form__color-label" for="type-white">Белый</label>
+                <span class="form__checkbox"></span>
               </li>
               <li class="form__color-item form__color-item--right">
-                <input class="visually-hidden" type="checkbox" name="color" id="type-grey">
-                <span class="checkbox"></span>
+                <input class="visually-hidden" type="checkbox" name="color" id="type-grey" checked>
                 <label class="form__color-label" for="type-grey">Серый</label>
+                <span class="form__checkbox"></span>
               </li>
               <li class="form__color-item form__color-item--marg-null">
                 <input class="visually-hidden" type="checkbox" name="color" id="type-tiff">
-                <span class="checkbox"></span>
                 <label class="form__color-label" for="type-tiff">«Тиффани»</label>
+                <span class="form__checkbox"></span>
               </li>
               <li class="form__color-item form__color-item--right">
                 <input class="visually-hidden" type="checkbox" name="color" id="type-black">
-                <span class="checkbox"></span>
                 <label class="form__color-label" for="type-black">Черный</label>
+                <span class="form__checkbox"></span>
               </li>
               <li class="form__color-item">
                 <input class="visually-hidden" type="checkbox" name="color" id="type-pink">
-                <span class="checkbox"></span>
                 <label class="form__color-label" for="type-pink">Розовый</label>
+                <span class="form__checkbox"></span>
               </li>
               <li class="form__color-item form__color-item--right form__color-item--marg-null">
                 <input class="visually-hidden" type="checkbox" name="color" id="type-orange">
-                <span class="checkbox"></span>
                 <label class="form__color-label form__color-label--last" for="type-orange">Оранжевый</label>
+                <span class="form__checkbox"></span>
               </li>
             </ul>
           </div>
@@ -153,29 +167,44 @@
   </main>
   <footer class="footer">
     <div class="footer__wrapper">
-      <a class="footer__logo">
-        <img src="http://placehold.it/105x50">
+      <a class="footer__logo" href="index.html">
+        <svg class="footer__logo-svg" width="101" height="34">
+          <use xlink:href="img/sprite.svg#footer-logo"></use>
+        </svg>
       </a>
       <ul class="social">
         <li class="social__item">
-          <a href="#">
+          <a class="social__item-link" href="#">
             <span class="visually-hidden">instagram</span>
+            <svg class="social__item-svg" width="21.769px" height="21.334px">
+              <use xlink:href="img/sprite.svg#icon-instagram"></use>
+            </svg>
           </a>
         </li>
         <li class="social__item">
-          <a href="#">
+          <a class="social__item-link" href="#">
             <span class="visually-hidden">facebook</span>
+            <svg class="social__item-svg" width="15px" height="28px">
+              <use xlink:href="img/sprite.svg#icon-facebook"></use>
+            </svg>
           </a>
         </li>
         <li class="social__item">
-          <a href="#">
+          <a class="social__item-link" href="#">
             <span class="visually-hidden">twitter</span>
+            <svg class="social__item-svg" width="23px" height="20px">
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+            </svg>
           </a>
         </li>
       </ul>
       <div class="footer__copyright">
-        <span class="footer__develop">Разработано</span>
-        <a class="footer__developer-logo" href="https://htmlacademy.ru/intensive/adaptive"><img src="http://placehold.it/30x38"></a>
+        <a class="footer__developer-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="footer__develop">Разработано</span>
+          <svg class="footer__developer-svg" width="27px" height="34px"  fill="#63d1bb">
+            <use xlink:href="img/sprite.svg#developer-logo"></use>
+          </svg>
+        </a>
       </div>
     </div>
   </footer>
