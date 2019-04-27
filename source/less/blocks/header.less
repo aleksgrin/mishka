@@ -4,11 +4,11 @@
 }
 
 .header__logo-link {
-  &:hover {
+  &[href]:hover {
     opacity: 0.6;
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.3;
   }
 
@@ -101,6 +101,7 @@
   right: 50px;
   padding: 15px 0;
   display: none;
+  z-index: 3;
 }
 
 @media (min-width: @tablet-width) {
@@ -170,6 +171,7 @@
     width: 21.7%;
     top: 91px;
     min-height: auto;
+    z-index: 3;
   }
 
   .header__menu-item:nth-child(2) {
@@ -298,6 +300,7 @@
   .header__product-menu--out {
     position: absolute;
     top: 105px;
+    z-index: 3;
   }
 
   .header__product-menu-item {

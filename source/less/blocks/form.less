@@ -49,20 +49,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 52px;
-  height: 52px;
+  // width: 52px;
+  // height: 52px;
+  width: 38px;
+  height: 38px;
   position: absolute;
   border: 1px solid #000000;
   border-radius: 50%;
-  top: 2px;
+  top: -8px;
+  left: 1px;
 }
 
 .form__radio::before{
   content: "";
   display: none;
   position: absolute;
-  width: 20px;
-  height: 20px;
+  // width: 20px;
+  // height: 20px;
+  width: 16px;
+  height: 16px;
   background-color: #62d1ba;
   border-radius: 50%;
 }
@@ -92,20 +97,28 @@ input[type="checkbox"]:disabled ~ .form__checkbox {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 52px;
-  height: 52px;
+  // width: 52px;
+  // height: 52px;
+  width: 38px;
+  height: 38px;
   position: absolute;
   border: 1px solid #000000;
-  top: 3px;
+  top: -12px;
+  left: 1px;
 }
 
 .form__checkbox::before {
   content: "";
   display: none;
   position: absolute;
-  width: 33px;
-  height: 22px;
-  background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='32.666px' height='22.742px' viewBox='0 0 32.666 22.742' enable-background='new 0 0 32.666 22.742' xml:space='preserve'%3E%3Cpolygon points='32.666,1.414 31.252,0 11.338,19.914 1.414,9.989 0,11.403 9.924,21.328 9.924,21.328 11.338,22.742 11.338,22.742 11.339,22.742 12.753,21.328 12.752,21.328 '/%3E%3C/svg%3E%0A");
+  // width: 33px;
+  // height: 22px;
+  width: 22px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='22px' height='16px' viewBox='0 0 33 22' enable-background='new 0 0 22 16' xml:space='preserve'%3E%3Cpolygon points='32.666,1.414 31.252,0 11.338,19.914 1.414,9.989 0,11.403 9.924,21.328 9.924,21.328 11.338,22.742 11.338,22.742 11.339,22.742 12.753,21.328 12.752,21.328 '/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-size: 22px 16px;
+  background-position: 0 0;
 }
 
 input[type="checkbox"]:checked ~ .form__checkbox::before {
@@ -136,10 +149,27 @@ input[type="checkbox"]:checked ~ .form__checkbox::before {
   }
 
   margin-bottom: 34px;
+  position: relative;
+  padding-right: 198px;
+}
+
+.form__title::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 198px;
+  height: 1px;
+  background-color: #63d1bb;
+  right: 0;
+  top: 8px;
+}
+
+.form__title--mail::before {
+  width: 179px;
 }
 
 .form__tel {
-  margin-bottom: 19px;
+  margin-bottom: 18px;
 }
 
 .form__type-list,
@@ -193,7 +223,9 @@ input[type="checkbox"]:checked ~ .form__checkbox::before {
   font-size: 19px;
   line-height: 18px;
   border: none;
-  padding: 15px 0;
+  // padding: 10px 0;
+  padding-top: 7px;
+  padding-bottom: 12px;
   border-bottom: 2px solid #000000;
   border-top: 2px solid transparent;
   width: 100%;
@@ -212,7 +244,7 @@ input[type="checkbox"]:checked ~ .form__checkbox::before {
 }
 
 .form__mail {
-  margin-bottom: 19px;
+  margin-bottom: 20px;
 }
 
 .form__textarea {
@@ -305,6 +337,31 @@ input[type="checkbox"]:checked ~ .form__checkbox::before {
     margin-bottom: 56px;
   }
 
+  .form__radio {
+    width: 52px;
+    height: 52px;
+    top: 2px;
+    left: 0;
+  }
+
+  .form__radio::before{
+    width: 20px;
+    height: 20px;
+  }
+
+  .form__checkbox {
+    width: 52px;
+    height: 52px;
+    top: 2px;
+    left: 1px;
+  }
+
+  .form__checkbox::before {
+    width: 33px;
+    height: 22px;
+    background-size: 33px 22px;
+  }
+
   .form__type-group {
     margin-bottom: 30px;
   }
@@ -322,6 +379,11 @@ input[type="checkbox"]:checked ~ .form__checkbox::before {
     width: 25%;
     margin: 0;
     margin-top: 13px;
+    padding-right: 0;
+  }
+
+  .form__title::before {
+    display: none;
   }
 
   .form__type-label {
@@ -428,6 +490,7 @@ input[type="checkbox"]:checked ~ .form__checkbox::before {
     background-color: #f1f1f1;
     margin-left: 43px;
     margin-top: 5px;
+    background-position: top 5px right 26px;
   }
 
   .form__mail {
@@ -445,6 +508,7 @@ input[type="checkbox"]:checked ~ .form__checkbox::before {
     background-color: #f1f1f1;
     margin-left: 43px;
     margin-top: 5px;
+    background-position: top 5px right 23px;
   }
 
   .form__add {
@@ -554,6 +618,14 @@ input[type="checkbox"]:checked ~ .form__checkbox::before {
   .form__mail-wrap {
     padding-top: 23px;
     padding-bottom: 48px;
+  }
+
+  .form__text-inp--tel {
+    background-position: top 5px right 8px;
+  }
+
+  .form__text-inp--mail {
+    background-position: top 5px right 6px;
   }
 
   .form__add-wrap {
