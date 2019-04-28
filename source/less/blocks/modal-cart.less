@@ -1,8 +1,20 @@
 .modal-cart {
+  display: block;
   width: 320px;
   padding: 0 30px;
-  margin: 0 auto;
-  display: none;
+  padding-bottom: 45px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #ffffff;
+  border: 1px solid #c7c7c7;
+  z-index: 10;
+  box-shadow: 0 5px 8px 0 #c6c6c6;
+}
+
+.modal-cart__form {
+  display: block;
 }
 
 .modal-cart__title {
@@ -76,6 +88,7 @@
   .modal-cart {
     width: 566px;
     padding: 0 108px;
+    padding-bottom: 45px;
   }
 
   .modal-cart__title {
