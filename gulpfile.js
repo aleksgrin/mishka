@@ -10,14 +10,21 @@ var server = require("browser-sync").create();
 var csso = require("gulp-csso");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
+var webp = require("gulp-webp");
 
-gulp.task("images", function(){
-  return gulp.src("source/img/**/*.{png, jpg, svg}")
+gulp.task("images", function() {
+  return gulp.src("source/img/**/*.{svg,jpg,png}")
     .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.svgo(),
       imagemin.jpegtran({progressive: true}),
-      imagemin.svgo()
+      imagemin.optipng({optimizationLevel: 3})
     ]))
+    .pipe(gulp.dest("source/img/"));
+});
+
+gulp.task("webp", function() {
+  return gulp.src("source/img/**/*.{jpg, png}")
+    .pipe(webp({quality: 90}))
     .pipe(gulp.dest("source/img/"));
 });
 
