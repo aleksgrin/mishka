@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Мишка</title>
-  <link rel="stylesheet" href="css/style-min.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 
   <div style="display: none">
-    <include src="build/img/sprite.svg"></include>
+    <include src="img/sprite.svg"></include>
   </div>
 
   <header class="header">
@@ -228,10 +228,18 @@
     <form class="modal-cart__form" action="https://echo.htmlacademy.ru" method="POST">
       <h2 class="modal-cart__title">Добавить в корзину</h2>
       <span class="modal-cart__pre-size">Выберите размер:</span>
+      <input class="visually-hidden" type="radio" id="size-1" name="toggle" checked>
+      <input class="visually-hidden" type="radio" id="size-2" name="toggle">
+      <input class="visually-hidden" type="radio" id="size-3" name="toggle">
+      <!-- <div class="modal-cart-controls">
+          <label class="modal-cart-controls-item modal-cart-controls-item--1" for="size-1">Первый</label>
+          <label class="modal-cart-controls-item modal-cart-controls-item--2" for="size-2">Второй</label>
+          <label class="modal-cart-controls-item modal-cart-controls-item--3" for="size-3">Третий</label>
+      </div> -->
       <ul class="modal-cart__size-list">
-        <li class="modal-cart__size-item modal-cart__size-item--active">S</li>
-        <li class="modal-cart__size-item">M</li>
-        <li class="modal-cart__size-item">L</li>
+        <li class="modal-cart__size-item modal-cart__size-item--active"><label class="modal-cart__controls-item modal-cart__controls-item--1" for="size-1">S</label></li>
+        <li class="modal-cart__size-item"><label class="modal-cart__controls-item modal-cart__controls-item--2" for="size-2">M</label></li>
+        <li class="modal-cart__size-item"><label class="modal-cart__controls-item modal-cart__controls-item--3" for="size-3">L</label></li>
       </ul>
       <button class="modal-cart__button button" type="submit">Добавить</button>
     </form>
@@ -239,7 +247,7 @@
 
   <div class="overlay overlay--hide"></div>
 
-  <script src="js/mishka.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
