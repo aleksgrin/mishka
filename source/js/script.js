@@ -4,6 +4,10 @@ var menu = document.querySelector(".header__menu-list");
 var modalCart = document.querySelector(".modal-cart");
 var weekOrderBtn = document.querySelector(".week-product__order");
 
+if (menuButton.classList.contains("header__toggle--hide")) {
+  menuButton.classList.remove("header__toggle--hide");
+}
+
 menuButton.addEventListener("click", function (event) {
   event.preventDefault();
   menu.classList.toggle("header__menu-list--close");

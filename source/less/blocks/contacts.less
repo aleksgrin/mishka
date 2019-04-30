@@ -70,6 +70,7 @@
   background-image: url("../../img/map-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size: 322px 457px;
+  background-color: #ebe2d1;
 
   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image: url("../../img/map-mobile@2x.jpg");
@@ -200,10 +201,15 @@
     margin-bottom: 78px;
   }
 
+  .contacts__wrapper {
+    .wrapper-desk();
+    position: relative;
+  }
+
   .contacts__map {
     position: absolute;
-    right: 188px;
-    top: 70px;
+    right: 50px;
+    top: -400px;
     width: 525px;
     height: 457px;
     background-image: url("../../img/map-desktop@1x.jpg");
