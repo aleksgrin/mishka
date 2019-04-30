@@ -9,7 +9,7 @@
 <body>
 
   <div style="display: none">
-    <include src="img/sprite.svg"></include>
+    <include src="build/img/sprite.svg"></include>
   </div>
 
   <header class="header">
@@ -231,15 +231,10 @@
       <input class="visually-hidden" type="radio" id="size-1" name="toggle" checked>
       <input class="visually-hidden" type="radio" id="size-2" name="toggle">
       <input class="visually-hidden" type="radio" id="size-3" name="toggle">
-      <!-- <div class="modal-cart-controls">
-          <label class="modal-cart-controls-item modal-cart-controls-item--1" for="size-1">Первый</label>
-          <label class="modal-cart-controls-item modal-cart-controls-item--2" for="size-2">Второй</label>
-          <label class="modal-cart-controls-item modal-cart-controls-item--3" for="size-3">Третий</label>
-      </div> -->
       <ul class="modal-cart__size-list">
-        <li class="modal-cart__size-item modal-cart__size-item--active"><label class="modal-cart__controls-item modal-cart__controls-item--1" for="size-1">S</label></li>
-        <li class="modal-cart__size-item"><label class="modal-cart__controls-item modal-cart__controls-item--2" for="size-2">M</label></li>
-        <li class="modal-cart__size-item"><label class="modal-cart__controls-item modal-cart__controls-item--3" for="size-3">L</label></li>
+        <li class="modal-cart__size-item"><label class="modal-cart__label" for="size-1">S</label></li>
+        <li class="modal-cart__size-item"><label class="modal-cart__label" for="size-2">M</label></li>
+        <li class="modal-cart__size-item"><label class="modal-cart__label" for="size-3">L</label></li>
       </ul>
       <button class="modal-cart__button button" type="submit">Добавить</button>
     </form>
