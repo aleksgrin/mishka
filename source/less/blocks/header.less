@@ -22,6 +22,17 @@
   margin-top: 5px;
 }
 
+.header__menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header__menu-list--close {
+  height: 0;
+  overflow: hidden;
+}
+
 .header__menu-link {
   font-weight: bold;
   font-size: 17px;
@@ -72,10 +83,16 @@
   &--open {
     background-image: url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='19.958px' height='14px' viewBox='0 0 19.958 14' enable-background='new 0 0 19.958 14' xml:space='preserve'%3E%3Crect fill='%23231F20' width='19.958' height='2'/%3E%3Crect y='6' fill='%23231F20' width='19.958' height='2'/%3E%3Crect y='12' fill='%23231F20' width='19.958' height='2'/%3E%3C/svg%3E%0A");
     background-repeat: no-repeat;
+    background-position: 0 3px;
+  }
+
+  &--hide {
+    display: none;
   }
 
   background: none;
   border: none;
+  outline: none;
   position: absolute;
   width: 20px;
   height: 20px;
@@ -83,12 +100,6 @@
   top: 29px;
 
   padding: 0;
-}
-
-.header__menu-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .header__product-menu {
@@ -115,7 +126,6 @@
   }
 
   .header__logo-link {
-    // width: 321px;
     width: 41.8%;
     position: absolute;
     z-index: 2;
@@ -167,7 +177,6 @@
     }
 
     position: absolute;
-    // width: 167px;
     width: 21.7%;
     top: 91px;
     min-height: auto;
@@ -180,14 +189,12 @@
 
   .header__menu-item--search {
     margin-left: auto;
-    // width: 84px;
     width: 12.6%;
     border-left: 1px solid #ececec;
     border-right: 1px solid #ececec;
   }
 
   .header__menu-item--cart {
-    // width: 264px;
     width: 39.5%;
     padding-left: 60px;
     text-align: right;
@@ -260,13 +267,11 @@
   }
 
   .header__menu-item:nth-child(1) {
-    // width: 184px;
     width: 17.5%;
     border-right: 1px solid #ececec;
   }
 
   .header__menu-item:nth-child(2) {
-    // width: 210px;
     width: 20%;
     padding-left: 36px;
   }
@@ -276,7 +281,6 @@
   }
 
   .header__menu-item--search {
-    // width: 82px;
     width: 7.8%;
     margin-left: auto;
     border-left: 1px solid #ececec;
@@ -304,9 +308,7 @@
   }
 
   .header__product-menu-item {
-    // width: 219px;
     width: 50%;
-    // width: 19%;
   }
 
   .header__product-menu-link {
