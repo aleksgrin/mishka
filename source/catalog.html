@@ -159,7 +159,7 @@
       <div class="production-proc__wrapper">
         <h2 class="production-proc__title">Процесс производства</h2>
         <div class="production-proc__video-wrap">
-          <svg class="production-proc__play-svg" width="100px" height="77px">
+          <svg class="production-proc__play-svg" width="100" height="77">
             <use xlink:href="#icon-play"></use>
           </svg>
           <picture>
@@ -192,7 +192,7 @@
         <li class="social__item">
           <a class="social__item-link" href="#">
             <span class="visually-hidden">instagram</span>
-            <svg class="social__item-svg" width="21.769px" height="21.334px">
+            <svg class="social__item-svg" width="21.769" height="21.334">
               <use xlink:href="#icon-insta"></use>
             </svg>
           </a>
@@ -200,7 +200,7 @@
         <li class="social__item">
           <a class="social__item-link" href="#">
             <span class="visually-hidden">facebook</span>
-            <svg class="social__item-svg" width="14.962px" height="27.718px" fill="#231F20">
+            <svg class="social__item-svg" width="14.962" height="27.718" fill="#231F20">
               <use xlink:href="#icon-fb"></use>
             </svg>
           </a>
@@ -208,7 +208,7 @@
         <li class="social__item">
           <a class="social__item-link" href="#">
             <span class="visually-hidden">twitter</span>
-            <svg class="social__item-svg" width="23.494px" height="20.168px" fill="#231F20">
+            <svg class="social__item-svg" width="23.494" height="20.168" fill="#231F20">
               <use xlink:href="#icon-twitter"></use>
             </svg>
           </a>
@@ -217,7 +217,7 @@
       <div class="footer__copyright">
         <a class="footer__developer-link" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="footer__develop">Разработано</span>
-          <svg class="footer__developer-svg" width="26.943px" height="34.09px" fill="#63d1bb">
+          <svg class="footer__developer-svg" width="26.943" height="34.09" fill="#63d1bb">
             <use xlink:href="#logo-htmlacademy"></use>
           </svg>
         </a>
@@ -228,10 +228,13 @@
     <form class="modal-cart__form" action="https://echo.htmlacademy.ru" method="POST">
       <h2 class="modal-cart__title">Добавить в корзину</h2>
       <span class="modal-cart__pre-size">Выберите размер:</span>
+      <input class="visually-hidden modal-cart__input--s" type="radio" id="size-1" name="toggle" checked>
+      <input class="visually-hidden modal-cart__input--m" type="radio" id="size-2" name="toggle">
+      <input class="visually-hidden modal-cart__input--l" type="radio" id="size-3" name="toggle">
       <ul class="modal-cart__size-list">
-        <li class="modal-cart__size-item modal-cart__size-item--active">S</li>
-        <li class="modal-cart__size-item">M</li>
-        <li class="modal-cart__size-item">L</li>
+        <li class="modal-cart__size-item"><label class="modal-cart__label" for="size-1">S</label></li>
+        <li class="modal-cart__size-item"><label class="modal-cart__label" for="size-2">M</label></li>
+        <li class="modal-cart__size-item"><label class="modal-cart__label" for="size-3">L</label></li>
       </ul>
       <button class="modal-cart__button button" type="submit">Добавить</button>
     </form>
