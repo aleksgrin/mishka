@@ -8,6 +8,12 @@ if (menuButton.classList.contains("header__toggle--hide")) {
   menuButton.classList.remove("header__toggle--hide");
 }
 
+if (window.innerWidth <= 768) {
+  menu.classList.add("header__menu-list--close");
+  menuButton.classList.remove("header__toggle--close");
+  menuButton.classList.add("header__toggle--open");
+}
+
 menuButton.addEventListener("click", function (event) {
   event.preventDefault();
   menu.classList.toggle("header__menu-list--close");
@@ -15,16 +21,20 @@ menuButton.addEventListener("click", function (event) {
   menuButton.classList.toggle("header__toggle--open");
 });
 
-weekOrderBtn.addEventListener("click", function (event) {
-  event.preventDefault();
-  overlay.classList.add("overlay--show");
-  modalCart.classList.add("modal-cart--show");
-});
+if (weekOrderBtn != null) {
+  weekOrderBtn.addEventListener("click", function (event) {
+    event.preventDefault();
+    overlay.classList.add("overlay--show");
+    modalCart.classList.add("modal-cart--show");
+  });
+}
 
-overlay.addEventListener("click", function (event) {
-  overlay.classList.remove("overlay--show");
-  modalCart.classList.remove("modal-cart--show");
-});
+if (overlay != null) {
+  overlay.addEventListener("click", function (event) {
+    overlay.classList.remove("overlay--show");
+    modalCart.classList.remove("modal-cart--show");
+  });
+}
 
 window.addEventListener("keydown", function (event) {
   if (event.keyCode === 27) {

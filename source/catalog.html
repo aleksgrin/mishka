@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+  <script src="js/picturefill.min.js" async></script>
 </head>
 <body>
 
@@ -24,7 +27,7 @@
       <button class="header__toggle header__toggle--close header__toggle--hide">
         <span class="visually-hidden">Раскрыть меню</span>
       </button>
-      <ul class="header__menu-list">
+      <ul class="header__menu-list header__menu-list--open">
         <li class="header__menu-item header__menu-item--out">
           <a class="header__menu-link">Каталог товаров</a>
         </li>
@@ -169,7 +172,7 @@
 
             <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
-            <img class="goods__image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Видео">
+            <img class="production-proc__image" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Видео">
           </picture>
         </div>
         <div class="production-proc__bottom-wrap">
@@ -228,17 +231,19 @@
     <form class="modal-cart__form" action="https://echo.htmlacademy.ru" method="POST">
       <h2 class="modal-cart__title">Добавить в корзину</h2>
       <span class="modal-cart__pre-size">Выберите размер:</span>
-      <input class="visually-hidden modal-cart__input--s" type="radio" id="size-1" name="toggle" checked>
-      <input class="visually-hidden modal-cart__input--m" type="radio" id="size-2" name="toggle">
-      <input class="visually-hidden modal-cart__input--l" type="radio" id="size-3" name="toggle">
+      <input class="visually-hidden modal-cart__input modal-cart__input--s" type="radio" id="size-S" name="size" value="size-S" checked>
+      <input class="visually-hidden modal-cart__input modal-cart__input--m" type="radio" id="size-M" value="size-M" name="size">
+      <input class="visually-hidden modal-cart__input modal-cart__input--l" type="radio" id="size-L" value="size-L" name="size">
       <ul class="modal-cart__size-list">
-        <li class="modal-cart__size-item"><label class="modal-cart__label" for="size-1">S</label></li>
-        <li class="modal-cart__size-item"><label class="modal-cart__label" for="size-2">M</label></li>
-        <li class="modal-cart__size-item"><label class="modal-cart__label" for="size-3">L</label></li>
+        <li class="modal-cart__size-item"><label class="modal-cart__label" for="size-S">S</label></li>
+        <li class="modal-cart__size-item"><label class="modal-cart__label" for="size-M">M</label></li>
+        <li class="modal-cart__size-item"><label class="modal-cart__label" for="size-L">L</label></li>
       </ul>
       <button class="modal-cart__button button" type="submit">Добавить</button>
     </form>
   </section>
+
+  <div class="overlay overlay--hide"></div>
 
   <script src="js/script.min.js"></script>
 

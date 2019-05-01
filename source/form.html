@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
+  <script src="js/picturefill.min.js" async></script>
 </head>
 <body>
 
@@ -24,7 +27,7 @@
       <button class="header__toggle header__toggle--close header__toggle--hide">
         <span class="visually-hidden">Раскрыть меню</span>
       </button>
-      <ul class="header__menu-list">
+      <ul class="header__menu-list header__menu-list--open">
         <li class="header__menu-item header__menu-item--out">
           <a class="header__menu-link" href="catalog.html">Каталог товаров</a>
         </li>
