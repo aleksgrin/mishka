@@ -16,17 +16,22 @@ if (window.innerWidth < 768) {
 }
 
 window.addEventListener('resize', function(event){
-  if (window.innerWidth > 768) {
+  if (window.innerWidth >= 768) {
     if (menu.classList.contains("header__menu-list--close")) {
       menu.classList.remove("header__menu-list--close")
       menu.classList.add("header__menu-list--open")
     }
   }
 
-  if (window.innerWidth <= 768) {
+  if (window.innerWidth < 768) {
     if (menu.classList.contains("header__menu-list--open")) {
       menu.classList.remove("header__menu-list--open")
       menu.classList.add("header__menu-list--close")
+    }
+
+    if (menuButton.classList.contains("header__toggle--close")) {
+      menuButton.classList.remove("header__toggle--close");
+      menuButton.classList.add("header__toggle--open");
     }
   }
 });
