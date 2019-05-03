@@ -8,14 +8,32 @@ if (menuButton.classList.contains("header__toggle--hide")) {
   menuButton.classList.remove("header__toggle--hide");
 }
 
-if (window.innerWidth <= 768) {
+if (window.innerWidth < 768) {
+  menu.classList.remove("header__menu-list--open");
   menu.classList.add("header__menu-list--close");
   menuButton.classList.remove("header__toggle--close");
   menuButton.classList.add("header__toggle--open");
 }
 
+window.addEventListener('resize', function(event){
+  if (window.innerWidth > 768) {
+    if (menu.classList.contains("header__menu-list--close")) {
+      menu.classList.remove("header__menu-list--close")
+      menu.classList.add("header__menu-list--open")
+    }
+  }
+
+  if (window.innerWidth <= 768) {
+    if (menu.classList.contains("header__menu-list--open")) {
+      menu.classList.remove("header__menu-list--open")
+      menu.classList.add("header__menu-list--close")
+    }
+  }
+});
+
 menuButton.addEventListener("click", function (event) {
   event.preventDefault();
+  menu.classList.toggle("header__menu-list--open");
   menu.classList.toggle("header__menu-list--close");
   menuButton.classList.toggle("header__toggle--close");
   menuButton.classList.toggle("header__toggle--open");
